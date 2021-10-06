@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from clientmanager.models import Client, Document
 
 
 def index(request):
-    # return HttpResponse("Hello, world. You're at the polls index.")
-    context = {'clients': [
-        {'id': 1, 'email': 'albert.minnie@protonmail.com'}], 'documents': [{'id': 1, 'client': 1}]}
+    clients = Client.objects.all()
+    documents = Document.objects.all()
+    context = {'clients': clients, 'documents': documents}
     return render(request, 'test.html', context)
