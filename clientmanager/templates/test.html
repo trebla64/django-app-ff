@@ -1,0 +1,13 @@
+<p>Clients:</p>
+<ul>
+{% for client in clients %}
+    <li>{{ client.id }} - {{ client.email }}</li>
+{% endfor %}
+</ul>
+
+<p>Documents:</p>
+<ul>
+{% for doc in documents %}
+    <li>{{ doc.client }}</li>
+{% endfor %}
+</ul>
