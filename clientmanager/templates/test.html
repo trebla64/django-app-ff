@@ -1,13 +1,46 @@
-<p>Clients:</p>
-<ul>
-{% for client in clients %}
-    <li>{{ client.id }} - {{ client.email }}</li>
-{% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
-<p>Documents:</p>
-<ul>
-{% for doc in documents %}
-    <li>{{ doc.client }}</li>
-{% endfor %}
-</ul>
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Clients:</h2>
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>E-mail</th>
+      </tr>
+      {% for client in clients %}
+      <tr>
+        <td>{{ client.id }}</td>
+        <td>{{ client.email }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Documents:</h2>
+    <ul>
+      {% for doc in documents %}
+      <li>{{ doc.client }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
