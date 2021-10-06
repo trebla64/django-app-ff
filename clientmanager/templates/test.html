@@ -37,10 +37,23 @@
     </table>
 
     <h2>Documents:</h2>
-    <ul>
+    <!-- <ul>
       {% for doc in documents %}
       <li>{{ doc.client }}</li>
       {% endfor %}
-    </ul>
+    </ul> -->
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Client</th>
+      </tr>
+      {% for doc in documents %}
+      <tr>
+        <td>{{ doc.id }}</td>
+        <td>{{ doc.client }}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>
