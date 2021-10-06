@@ -8,3 +8,7 @@ def index(request):
     documents = Document.objects.all()
     context = {'clients': clients, 'documents': documents}
     return render(request, 'test.html', context)
+
+
+def addClient(request):
+    return HttpResponse('add client view')
