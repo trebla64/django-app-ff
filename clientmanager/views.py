@@ -7,7 +7,7 @@ def index(request):
     clients = Client.objects.all()
     documents = Document.objects.all()
     context = {'clients': clients, 'documents': documents}
-    return render(request, 'test.html', context)
+    return render(request, 'main.html', context)
 
 
 def addClient(request):
