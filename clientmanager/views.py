@@ -12,3 +12,6 @@ def index(request):
 
 def addClient(request):
     return HttpResponse('add client view')
+
+def sendRequest(request):
+    return HttpResponse('send request view')
